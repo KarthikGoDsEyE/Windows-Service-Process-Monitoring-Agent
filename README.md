@@ -24,6 +24,29 @@ This agent combines local SMART heuristics with cloud-based threat intelligence 
 * **Automated Logging & Reporting:** * Generates a permanent, structured text log of all process activity (`logs/process_log.txt`).
   * Automatically compiles a structured JSON report (`report.json`) of all Medium and High severity threats upon termination.
 
+---
+## 📁 Project Structure
+
+```
+ Windows Service & Process Monitor/
+├── logs/                   # Directory for automated text logs
+│   └── process_log.txt     # Standardized record of all monitored events
+├── images/                 # Folder containing README screenshots
+│   ├── dashboard.jpg       # Visual of the live monitoring interface
+│   └── report.jpg          # Visual of the final incident summary
+├── analyzer_utils.py       # Core logic for signatures, hashes, and cloud API calls
+├── config.py               # Local settings, whitelists, and private API keys
+├── dashboard.py            # Rich-based UI logic for the terminal table
+├── detection_engine.py     # Rules for parent-child and temp execution anomalies
+├── logger.py               # Handles formatted file logging and system events
+├── main.py                 # The central execution loop and process iterator
+├── process_monitor.py      # Basic process tracking and keyword scanning
+├── report_generator.py     # Compiles threat data into a structured JSON report
+├── requirements.txt        # List of necessary Python dependencies
+├── service_monitor.py      # WMI-based logic for scanning Windows services
+├── vt_cache.json           # Local cache to optimize VirusTotal API usage
+└── README.md               # Project documentation and setup guide
+```
 ## 🛠️ Prerequisites
 
 * Windows Operating System
