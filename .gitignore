@@ -1,0 +1,13 @@
+# Configuration / Secrets
+config.py
+
+# Caches and Logs
+vt_cache.json
+logs/
+report.json
+__pycache__/
+*.pyc
+
+# Virtual Environments (if you use one later)
+venv/
+env/
